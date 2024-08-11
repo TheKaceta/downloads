@@ -94,9 +94,7 @@
             margin-right: auto;
         }
 
-        .download-btn {
-            background: linear-gradient(45deg, #00c6ff, #0072ff);
-            color: white;
+        .download-btn, .telegram-btn {
             padding: 15px 30px;
             border: none;
             border-radius: 50px;
@@ -106,10 +104,35 @@
             margin-top: 20px;
             text-decoration: none;
             display: inline-block;
+            color: white;
+        }
+
+        .download-btn {
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .download-btn:hover {
             background: linear-gradient(45deg, #0072ff, #00c6ff);
+        }
+
+        .telegram-btn {
+            background: linear-gradient(45deg, #0088cc, #006699);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .telegram-btn:hover {
+            background: linear-gradient(45deg, #006699, #0088cc);
+        }
+
+        .download-btn img, .telegram-btn img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
         }
 
         .details {
@@ -145,8 +168,17 @@
         <p>O "Spotify Premium Mod APK" refere-se a uma versão modificada do aplicativo Spotify Premium para Android. Em vez de obter o Spotify Premium através dos canais oficiais, onde você paga uma assinatura, o mod APK tenta oferecer os recursos do Spotify Premium gratuitamente. Esses recursos geralmente incluem a remoção de anúncios, a capacidade de ouvir músicas offline e a qualidade de áudio aprimorada.</p>
         
         <!-- Botão de Download -->
-        <a href="http://20.201.114.237/downloads/spotify.apk" class="download-btn" download>Baixar Agora</a>
+        <a href="http://20.201.114.237/downloads/spotify.apk" class="download-btn" download>
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724933.png" alt="Download">
+            Baixar Agora
+        </a>
         
+        <!-- Botão do Telegram -->
+        <a href="https://t.me/resenha_free" class="telegram-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+            Acesse nosso Telegram
+        </a>
+
         <!-- Detalhes do Jogo -->
         <div class="details">
             <p><strong>Compatibilidade:</strong> Android</p>
