@@ -21,7 +21,8 @@
             text-align: center;
             max-width: 800px;
             padding: 40px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #000;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
@@ -29,7 +30,7 @@
         h1 {
             font-size: 48px;
             margin-bottom: 20px;
-            letter-spacing: 2px;
+            color: #1e3c72;
         }
 
         p {
@@ -70,17 +71,88 @@
         .section h2 {
             font-size: 32px;
             margin-bottom: 20px;
+            color: #1e3c72;
         }
 
         .section p {
             font-size: 16px;
             margin-bottom: 10px;
         }
+
+        .terms-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .terms-content {
+            max-width: 600px;
+            padding: 30px;
+            background: #fff;
+            color: #000;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .terms-content h2 {
+            color: #1e3c72;
+        }
+
+        .terms-content p {
+            margin-bottom: 20px;
+        }
+
+        .btn-accept,
+        .btn-decline {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #0088cc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .btn-accept:hover {
+            background-color: #006699;
+        }
+
+        .btn-decline {
+            background-color: #cc0000;
+        }
+
+        .btn-decline:hover {
+            background-color: #990000;
+        }
+
     </style>
 </head>
 <body>
+    <div class="terms-container" id="terms-container">
+        <div class="terms-content">
+            <h2>Termos de Uso</h2>
+            <p>
+                Bem-vindo ao Resenha Free! Antes de continuar, é importante que você leia e aceite nossos termos de uso. 
+                Não temos a intenção de infringir quaisquer direitos autorais. Todos os aplicativos disponíveis no Resenha Free 
+                são fornecidos exclusivamente para análise e teste. Se você é detentor de direitos sobre algum aplicativo e deseja 
+                que ele seja removido, entre em contato conosco, e tomaremos as medidas necessárias.
+            </p>
+            <button class="btn-accept" onclick="acceptTerms()">Aceitar</button>
+            <button class="btn-decline" onclick="declineTerms()">Recusar</button>
+        </div>
+    </div>
 
-    <div class="container">
+    <div class="container" id="main-container" style="display:none;">
         <h1>Bem-vindo ao Resenha Free!</h1>
         <p>
             Aqui você encontra os melhores aplicativos para Android, todos disponíveis para download gratuito. 
@@ -107,17 +179,17 @@
                 Fale Conosco no Telegram
             </a>
         </div>
-
-        <div class="section">
-            <h2>Nossa Intenção</h2>
-            <p>
-                Não temos a intenção de infringir quaisquer direitos autorais. Todos os aplicativos 
-                disponíveis no Resenha Free são fornecidos exclusivamente para análise e teste. 
-                Se você é detentor de direitos sobre algum aplicativo e deseja que ele seja removido, 
-                entre em contato conosco, e tomaremos as medidas necessárias.
-            </p>
-        </div>
     </div>
 
+    <script>
+        function acceptTerms() {
+            document.getElementById('terms-container').style.display = 'none';
+            document.getElementById('main-container').style.display = 'block';
+        }
+
+        function declineTerms() {
+            window.location.href = 'https://www.google.com';
+        }
+    </script>
 </body>
 </html>
