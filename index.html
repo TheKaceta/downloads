@@ -4,39 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo ao Nosso Site de Aplicativos</title>
+    <title>Nosso Site de Aplicativos</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(to right, #00c6ff, #0072ff);
-            color: white;
             margin: 0;
-            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f2027;
+            background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+            background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        header nav a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #00c6ff;
+        }
+
+        .hero {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-        }
-
-        .container {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
-            max-width: 800px;
             text-align: center;
+            background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+            background-size: cover;
+            background-position: center;
         }
 
-        h1 {
-            font-size: 36px;
+        .hero-text {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 50px;
+            border-radius: 15px;
+            max-width: 800px;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
             margin-bottom: 20px;
-            color: #fff;
         }
 
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #ddd;
+        .hero-text p {
+            font-size: 20px;
+            margin-bottom: 30px;
         }
 
         .telegram-btn {
@@ -64,32 +96,34 @@
             background: linear-gradient(45deg, #006699, #0088cc);
         }
 
-        .terms-btn {
-            background: transparent;
-            border: 2px solid #fff;
-            border-radius: 50px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            color: white;
-            text-decoration: none;
-            margin-top: 20px;
-            display: inline-block;
-            transition: background 0.3s ease;
+        .content {
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
-        .terms-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .content .section {
+            margin-bottom: 50px;
         }
 
         .footer {
-            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.9);
             font-size: 14px;
-            color: #bbb;
         }
 
         .footer a {
-            color: #ddd;
+            color: #00c6ff;
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -101,22 +135,68 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Bem-vindo ao Nosso Site de Aplicativos</h1>
-        <p>Nosso site é dedicado a fornecer uma variedade de aplicativos para download. Seja para entretenimento ou
-            utilidade, temos uma seleção diversificada para atender às suas necessidades.</p>
-        <p>Acompanhe todos os lançamentos e novidades através do nosso canal no Telegram. Lá você receberá atualizações
-            frequentes sobre novos aplicativos disponíveis para download.</p>
-        <p>Não temos a intenção de infringir qualquer direito autoral. Todos os aplicativos compartilhados são de fontes
-            públicas, e incentivamos os usuários a apoiar os desenvolvedores comprando versões oficiais sempre que
-            possível.</p>
-        <a href="https://t.me/resenha_free" class="telegram-btn">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-            Siga nosso Canal no Telegram
-        </a>
-        <a href="termos.html" class="terms-btn">Leia os Termos de Uso</a>
-        <p class="footer">Ao continuar navegando, você concorda com nossos <a href="termos.html">termos de uso</a>.</p>
+
+    <header>
+        <h1>Nosso Site de Aplicativos</h1>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#acompanhamento">Acompanhe os Apps</a>
+            <a href="#intencao">Nossa Intenção</a>
+            <a href="#anunciar">Anuncie Conosco</a>
+            <a href="termos.html">Termos de Uso</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Bem-vindo ao Nosso Site de Aplicativos</h1>
+            <p>Descubra, baixe e acompanhe os melhores aplicativos com facilidade.</p>
+            <a href="#acompanhamento" class="telegram-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+                Acompanhe-nos no Telegram
+            </a>
+        </div>
     </div>
+
+    <div class="content">
+        <div id="sobre" class="section">
+            <h2>O que é nosso site?</h2>
+            <p>Nosso site é dedicado a fornecer uma ampla variedade de aplicativos para download. Temos uma seleção
+                diversificada para atender às suas necessidades, sejam elas de entretenimento, utilidade ou produtividade.</p>
+        </div>
+
+        <div id="acompanhamento" class="section">
+            <h2>Por onde acompanho os apps?</h2>
+            <p>Acompanhe todos os lançamentos e novidades através do nosso canal no Telegram. Receba atualizações
+                frequentes sobre novos aplicativos e fique por dentro das últimas tendências do mundo digital.</p>
+            <a href="https://t.me/resenha_free" class="telegram-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+                Siga nosso Canal no Telegram
+            </a>
+        </div>
+
+        <div id="intencao" class="section">
+            <h2>Nossa Intenção</h2>
+            <p>Não temos a intenção de infringir qualquer direito autoral. Todos os aplicativos compartilhados são de
+                fontes públicas, e incentivamos os usuários a apoiar os desenvolvedores comprando versões oficiais sempre
+                que possível.</p>
+        </div>
+
+        <div id="anunciar" class="section">
+            <h2>Quer anunciar em nossas abas?</h2>
+            <p>Entre em contato conosco através do nosso canal do Telegram para mais informações sobre como anunciar no
+                nosso site e alcançar uma audiência engajada e interessada.</p>
+            <a href="https://t.me/resenha_free" class="telegram-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+                Fale Conosco no Telegram
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Nosso Site de Aplicativos. Todos os direitos reservados. | <a href="termos.html">Termos de Uso</a></p>
+    </div>
+
 </body>
 
 </html>
